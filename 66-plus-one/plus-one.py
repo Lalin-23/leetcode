@@ -1,7 +1,10 @@
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        x=''.join(str(i) for i in digits)
-        nums=int(x)+1
-        return list(map(int,str(nums)))
+        s=0
+        for i in range(0,len(digits)):
+            s=(s*10) + digits[i]
+        s+=1
+        return list(map(int,str(s)))    
+
 
         
